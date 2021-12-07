@@ -1,0 +1,57 @@
+
+    <style>
+        .row {
+           margin: 1rem 0;
+        }
+     
+        label {
+           font-size: 20px;
+           font-weight: bold;
+        }
+     
+        span {
+           color: red;
+        }
+     </style>
+     
+     
+     <div class="container" ng-controller="vAddCTR">
+        <div class="row justify-content-center">
+           <div class="col-8 border">
+              <h1>Add New Name</h1>
+              <form action="" name="vFormAdd" ng-submit="addFood()">
+     
+                 <div class="row">
+                    <label for="" class="form-label">Name:</label>
+                    <div class="col-7">
+                       <input type="text" class="form-control" name="vName" id="vName" ng-model="vName" required>
+                    </div>
+                    <span class="col-auto col-form-label" ng-show="vFormAdd.vName.$invalid">Username is required.</span>
+     
+                 </div>
+                 <div class="row">
+                    <label for="" class="form-label">Age:</label>
+                    <div class="col-7">
+                       <input type="number" class="form-control" name="vId" id="vId" ng-model="vId" required>
+                    </div>
+                    <span class="col-auto col-form-label" ng-show="vFormAdd.vId.$invalid">Age is required.</span>
+                 </div>
+     
+                 <div class="row">
+                    <label for="" class="form-label">Email:</label>
+                    <div class="col-7">
+                       <input type="email" class="form-control" name="vPrice" id="vPrice" ng-model="vPrice" required>
+                    </div>
+                    <span class="col-auto col-form-label" ng-show="vFormAdd.vPrice.$invalid">Invalid email address.</span>
+     
+                 </div>
+     
+                 <div>
+                    <input type="submit" >
+                       
+                 </div>
+              </form>
+           </div>
+        </div>
+     
+     

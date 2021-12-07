@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,10 +47,10 @@
    <div class="container" ng-app="vAPP" ng-controller="vCTR">
 
       <nav class="row justify-content-center text-center border border-3 border-dark">
-         <a class="col-3" href="#/!">Home</a>
-         <a class="col-3" href="#!food">Food</a>
-         <a class="col-3" href="#!add">Add New Food</a>
-         <a class="col-3" href="#!about">About</a>
+         <a class="col-3" href="#/!">home</a>
+         <a class="col-3" href="#!index">index</a>
+         <a class="col-3" href="#!register">register</a>
+       
       </nav>
       <div ng-view></div>
 
@@ -59,12 +60,12 @@
          app.config(function ($routeProvider) {
             $routeProvider
 
-               .when("/food", {
-                  templateUrl: "food.html"
+               .when("/index", {
+                  templateUrl: "index.html"
                })
-               .when("/add", {
-                  templateUrl: "addNewfood.html"
-                  // controller: "vAddCTR"
+               .when("/register", {
+                  templateUrl: "register.html"
+                 
                })
 
          });
@@ -83,7 +84,7 @@
             }
          });
 
-         //lap trinh cho su kien submit cua form nhap thong tin food
+        
          app.controller("vAddCTR", function ($scope) {
             $scope.addFood = function () {
 
@@ -94,18 +95,15 @@
                   return;
                }
 
-               let newFood = {
-                  "id": $scope.vId,
-                  "name": $scope.vName,
-                  "price": $scope.vPrice
+               let newindex = {
+                  "name": $scope.Name,
+                  "price": $scope.Age,
+                  "name": $scope.gmail
                };
-               alert("Add new food successfully!!!");
-               console.log(newFood);
-               //luu doi tuong nv_moi vo mang ds
-               $scope.ds.push(newFood);
-               console.log($scope.ds);
-               alert("Your input ok")
+               
+                              
             };
+
          });
       </script>
 </body>
