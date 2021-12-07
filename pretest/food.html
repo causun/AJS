@@ -1,0 +1,21 @@
+<style>
+   
+</style>
+    <h1>Menu</h1>
+    <table class="table table-striped table-hover table-bordered">
+       <thead>
+          <tr class="text-center">
+             <th>ID</th>
+             <th>Name</th>
+             <th>Price</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr class="text-center" ng-repeat="item in ds|filter:vSearch | orderBy:vsort2">
+             <td class="col-form-label">{{item.id}}</td>
+             <td>{{item.name}}</td>
+             <td>{{item.price}}</td>
+             
+          </tr>
+       </tbody>
+    </table>
